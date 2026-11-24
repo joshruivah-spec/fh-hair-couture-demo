@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Florian Hurel Hair Couture &amp; Spa</title>
+<meta name="description" content="Bespoke hair, scalp, skin, nail and spa rituals across Mumbai, Pune, Ahmedabad and Hyderabad.">
+<style>
+:root{--bg:#0b1020;--card:#141a33;--text:#e8ecf8;--muted:#9aa4c7;--accent:#4f8cff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:rgba(11,16,32,.9);backdrop-filter:blur(8px);border-bottom:1px solid #ffffff14;z-index:10}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:700;font-size:1.15rem}.logo span{color:var(--accent)}
+.links{display:flex;gap:22px}.links a{color:var(--muted);font-size:.95rem}.links a:hover{color:var(--text)}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 24px;border-radius:999px;font-weight:600}
+.btn:hover{filter:brightness(1.12)}
+.hero{padding:90px 0 60px;text-align:center}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.15;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),#a855f7);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);max-width:620px;margin:18px auto 30px;font-size:1.1rem}
+section{padding:60px 0}
+h2{font-size:1.8rem;margin-bottom:8px}.sub{color:var(--muted);margin-bottom:30px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid #ffffff12;padding:26px;border-radius:14px}
+.card h3{margin-bottom:8px;font-size:1.1rem}.card p{color:var(--muted);font-size:.95rem}
+.icon{font-size:1.6rem;margin-bottom:10px}
+.contact{background:var(--card);border:1px solid #ffffff12;border-radius:14px;padding:40px;text-align:center}
+footer{border-top:1px solid #ffffff14;padding:26px 0;color:var(--muted);font-size:.9rem;text-align:center}
+#toggle{display:none;background:none;border:0;color:var(--text);font-size:1.5rem;cursor:pointer}
+@media(max-width:720px){#toggle{display:block}
+.links{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--card);display:none}
+.links.open{display:flex}.links a{padding:14px 20px;border-top:1px solid #ffffff10}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <div class="logo">Florian Hurel <span>Hair Couture</span></div>
+  <button id="toggle" aria-label="Menu">☰</button>
+  <div class="links" id="links">
+    <a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </div>
+</nav></div></header>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>Hair couture, <em>sculpted with precision</em></h1>
+    <p>Bespoke hair, scalp and spa rituals across seven ateliers in four cities. Crafted with precision, delivered with discretion.</p>
+    <a class="btn" href="#contact">Visit our website</a>
+  </div>
+
+  <section id="services">
+    <h2>Signature services</h2>
+    <p class="sub">Every experience is bespoke and tailored to you.</p>
+    <div class="grid">
+      <div class="card"><div class="icon">✂️</div><h3>Hair Couture</h3><p>Every cut, colour and finish is tailored to define and express your identity.</p></div>
+      <div class="card"><div class="icon">🌿</div><h3>Korean Scalp Treatment</h3><p>A scalp ritual with advanced AI diagnostics and targeted care for stronger, healthier hair.</p></div>
+      <div class="card"><div class="icon">💆</div><h3>Spa, Skin and Nails</h3><p>Body rituals, skin rituals, luxury spa and premium nail care, with couture-level detail.</p></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About us</h2>
+    <p class="sub">Florian Hurel Hair Couture &amp; Spa is a luxury salon with seven atelier spaces across four cities: Walkeshwar, Bandra West and Waterfield Road in Mumbai, Koregaon Park in Pune, Sindhubhavan Road and Ambli in Ahmedabad, and Jubilee Hills in Hyderabad. Each visit begins with a refined welcome and a personalised consultation.</p>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>Book your visit</h2>
+      <p class="sub">Find your nearest atelier and book on our website.</p>
+      <a class="btn" href="https://florianhurelhaircouture.com">florianhurelhaircouture.com</a>
+    </div>
+  </section>
+</div>
+
+<footer>© <span id="yr"></span> Florian Hurel Hair Couture &amp; Spa. All rights reserved.</footer>
+<script>
+const t=document.getElementById('toggle'),l=document.getElementById('links');
+t.onclick=()=>l.classList.toggle('open');
+l.onclick=()=>l.classList.remove('open');
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
